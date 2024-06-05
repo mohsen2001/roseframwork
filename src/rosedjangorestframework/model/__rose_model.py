@@ -5,8 +5,8 @@ import uuid
 
 class RoseModel(models.Model):
     user_created = models.BigIntegerField(
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
     )
     datetime_created = models.DateTimeField(
         null=False,
@@ -25,8 +25,8 @@ class RoseModel(models.Model):
         blank=True,
     )
     user_updated = models.BigIntegerField(
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
 
     )
 
