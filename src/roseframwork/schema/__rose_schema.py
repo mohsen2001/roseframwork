@@ -9,6 +9,7 @@ def __check_is_empty(list):
     return False
 
 
+
 class RoseSchema(ModelSchema):
 
     @classmethod

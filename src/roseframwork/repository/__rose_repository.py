@@ -1,4 +1,4 @@
-from src.rosedjangorestframework.map import RoseMap
+from src.roseframwork.map import RoseMap
 
 
 class RoseRepository:
