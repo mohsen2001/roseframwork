@@ -1,1 +1,1 @@
-from __rose_model import RoseModel
+from .__rose_model import RoseModel

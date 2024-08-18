@@ -1,9 +1,14 @@
 from django.db import models
 
-from RoseFramwork.model import RoseModel
+# Create your models here.
 
 
-class TestMyModel(RoseModel):
+
+
+from roseframwork import model
+
+
+class TestMyModel(model.RoseModel):
     __test__ = False  # Indicates this model is for testing
     field1 = models.CharField(max_length=20)
     field2 = models.CharField(max_length=20)
@@ -14,4 +19,5 @@ class TestMyModel(RoseModel):
     ip_updated = models.CharField(max_length=15, null=True, blank=True)
     user_updated = models.IntegerField(null=True, blank=True)
     date_updated = models.DateTimeField(auto_now=True)
+
 

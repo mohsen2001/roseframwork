@@ -1,6 +1,10 @@
+
+
+
+# Create your tests here.
 import pytest
 
-from data.models import TestMyModel
+from testrose.models import TestMyModel
 
 
 #
@@ -26,6 +30,7 @@ def test_create():
     assert instance.field2 == "00123"
     assert instance.ip_created == "192.168.59.2"
     assert instance.user_created == 1
+    print(instance.date_created)
     assert instance.date_created is not None
     assert instance.record_uuid is not None
 
