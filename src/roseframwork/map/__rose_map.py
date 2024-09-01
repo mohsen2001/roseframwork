@@ -18,6 +18,8 @@ class RoseMap:
             include_fields = self.__default_columns
         if len(include_fields) == 0:
             include_fields = self.__default_columns
+        include_fields.append('user_created')
+        include_fields.append('ip_created')
         if exclude_fields is not None and len(exclude_fields)>0:
             entity_dict = schema.dict(
                 include=dict(include_fields),  # Only these fields will be included
@@ -27,9 +29,27 @@ class RoseMap:
             entity_dict = schema.dict(
                 include=dict(include_fields),  # Only these fields will be included
             )
+
         return entity_dict
 
 
 
-    def get_default_columns_to_update(self, exclude_fields: [], include_fields: [], model):
-        return self.__default_columns
+    def get_default_columns_to_update(self, exclude_fields: [], include_fields: [], schema):
+        if include_fields is None:
+            include_fields = self.__default_columns
+        if len(include_fields) == 0:
+            include_fields = self.__default_columns
+        include_fields.append('ip_updated')
+        include_fields.append('user_updated')
+        if exclude_fields is not None and len(exclude_fields)>0:
+            entity_dict = schema.dict(
+                include=dict(include_fields),  # Only these fields will be included
+                exclude=dict(exclude_fields)  # 'description' field will be excluded even if it was included
+            )
+        else:
+            entity_dict = schema.dict(
+                include=dict(include_fields),  # Only these fields will be included
+            )
+
+        return entity_dict
+
