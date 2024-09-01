@@ -1,11 +1,14 @@
 from django.db import models
 
+from roseframwork import model
+
+
 # Create your models here.
 
 
 
 
-from roseframwork import model
+
 
 
 class TestMyModel(model.RoseModel):
