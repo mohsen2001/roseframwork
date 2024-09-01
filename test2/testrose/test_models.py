@@ -1,26 +1,6 @@
-
-
-
-# Create your tests here.
 import pytest
 
 from testrose.models import TestMyModel
-
-
-#
-# @pytest.fixture(scope='session', autouse=True)
-# def configure_test_settings():
-#     settings.configure(
-#         INSTALLED_APPS=['tests'],
-#         DATABASES={
-#             'default': {
-#                 'ENGINE': 'django.db.backends.sqlite3',
-#                 'NAME': ':memory:'
-#             }
-#         },
-#     )
-#     django.setup()
-
 
 
 @pytest.mark.django_db
