@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='roseframework',
-    version='0.0.1',
+    version='0.0.2',
     license='MIT License',
     author='Mohsen Abedi',
     author_email='mohsen2001@gmail.com',
